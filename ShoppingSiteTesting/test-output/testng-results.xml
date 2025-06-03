@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-03T14:47:20 IST" name="Default suite" finished-at="2025-06-03T14:47:24 IST" duration-ms="4043">
+    <groups>
+    </groups>
+    <test started-at="2025-06-03T14:47:20 IST" name="Default test" finished-at="2025-06-03T14:47:24 IST" duration-ms="4043">
+      <class name="runner.T001_RegisterUser">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:runner.T001_RegisterUser@65fb9ffc]" started-at="2025-06-03T14:47:20 IST" name="preCondition" finished-at="2025-06-03T14:47:23 IST" duration-ms="3644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method signature="register()[pri:0, instance:runner.T001_RegisterUser@65fb9ffc]" started-at="2025-06-03T14:47:23 IST" name="register" finished-at="2025-06-03T14:47:24 IST" duration-ms="281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:runner.T001_RegisterUser@65fb9ffc]" started-at="2025-06-03T14:47:24 IST" name="postCondition" finished-at="2025-06-03T14:47:24 IST" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+      </class> <!-- runner.T001_RegisterUser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
