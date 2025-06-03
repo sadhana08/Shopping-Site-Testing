@@ -13,8 +13,8 @@ public class BaseClass {
 	public void preCondition() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-//		driver.get("https://demowebshop.tricentis.com/");
-		driver.get("https://demowebshop.tricentis.com/register");
+		driver.get("https://demowebshop.tricentis.com/");
+//		driver.get("https://demowebshop.tricentis.com/register");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
