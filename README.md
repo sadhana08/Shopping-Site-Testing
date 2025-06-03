@@ -1,6 +1,6 @@
 # Shopping-Site-Testing
 Automation script using Selenium WebDriver for testing Shopping site https://demowebshop.tricentis.com/
-TestNG
-Cucumber
-POM
-Extent Reports
+1. TestNG
+2. Cucumber
+3. POM
+4. Extent Reports
