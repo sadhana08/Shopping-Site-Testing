@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import base.BaseClass;
 
@@ -33,12 +34,13 @@ public class RegisterUser extends BaseClass{
 		return this;
 	}
 	
-	public void clickRegister() {
+	public RegisterUser clickRegister() {
 		driver.findElement(By.id("register-button")).click();
-			
+		return this;	
 	}
 	
 	public void registraionDone() {
-		
+		String text = driver.findElement(By.xpath("//div[contains(text(), 'registration completed')]")).getText();
+		Assert.assertEquals(text, "Your registration completed");
 	}
 }

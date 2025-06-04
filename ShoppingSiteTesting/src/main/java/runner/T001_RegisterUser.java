@@ -13,6 +13,6 @@ public class T001_RegisterUser extends BaseClass{
 		RegisterUser regUser = new RegisterUser(driver);
 		HomePage homePg = new HomePage(driver);
 		homePg.gotoRegister();
-		regUser.enterFirstName("Sadh").enterLastName("S").enterEmail("sadhs@gmail.com").enterPassword("sadh@123").clickRegister();
+		regUser.enterFirstName("Sadh").enterLastName("S").enterEmail("sadhs@gmail.com").enterPassword("sadh@123").clickRegister().registraionDone();
 	}
 }
