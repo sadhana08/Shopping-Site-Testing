@@ -13,7 +13,7 @@ public class HomePgCu extends BaseClassCu{
 //		this.driver=driver;
 //	}
 	
-	@When("click on the Register Tab")
+	@When("Click on the Register Tab")
 	public RegisterUserStepDefCu gotoRegister() {
 		driver.findElement(By.xpath("//a[text()='Register']")).click();
 		return new RegisterUserStepDefCu();

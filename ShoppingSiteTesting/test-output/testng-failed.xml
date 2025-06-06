@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.T001_RegisterUser">
+      <class name="runner.T001_RegisterUser_Cu">
         <methods>
-          <include name="preCondition"/>
-          <include name="setDataFileName"/>
-          <include name="register" invocation-numbers="2"/>
+          <include name="setUpClass"/>
           <include name="postCondition"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="preCondition"/>
         </methods>
-      </class> <!-- runner.T001_RegisterUser -->
+      </class> <!-- runner.T001_RegisterUser_Cu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
