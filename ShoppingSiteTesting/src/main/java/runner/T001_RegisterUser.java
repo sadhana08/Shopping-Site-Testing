@@ -1,5 +1,6 @@
 package runner;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
@@ -8,11 +9,16 @@ import pages.RegisterUser;
 
 public class T001_RegisterUser extends BaseClass{
 	
-	@Test
-	public void register() {
+	@BeforeTest
+	public void setDataFileName() {
+		fileData = "RegisterUser";
+	}
+	
+	@Test(dataProvider = "getData")
+	public void register(String fName, String lName, String email, String password) {
 		RegisterUser regUser = new RegisterUser(driver);
 		HomePage homePg = new HomePage(driver);
 		homePg.gotoRegister();
-		regUser.enterFirstName("Sadh").enterLastName("S").enterEmail("sadhs@gmail.com").enterPassword("sadh@123").clickRegister().registraionDone();
+		regUser.enterFirstName(fName).enterLastName(lName).enterEmail(email).enterPassword(password).clickRegister().registraionDone();
 	}
 }
