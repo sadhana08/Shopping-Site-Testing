@@ -14,38 +14,38 @@ public class RegisterUserStepDefCu extends BaseClassCu{
 //		this.driver = driver;
 //	}
 	
-	@When("enter the first name as {string}")
+	@When("Enter the first name as {string}")
 	public RegisterUserStepDefCu enterFirstName(String fName) {
 		driver.findElement(By.id("FirstName")).sendKeys(fName);
 		return this;
 	}
 	
-	@And("enter the last name as {string}")
+	@And("Enter the last name as {string}")
 	public RegisterUserStepDefCu enterLastName(String lName) {
 		driver.findElement(By.id("LastName")).sendKeys(lName);
 		return this;
 	}
 	
-	@And("enter the email as {string}")
+	@And("Enter the email as {string}")
 	public RegisterUserStepDefCu enterEmail(String email) {
 		driver.findElement(By.id("Email")).sendKeys(email);
 		return this;
 	}
 	
-	@And("enter the password as {string}")
+	@And("Enter the password as {string}")
 	public RegisterUserStepDefCu enterPassword(String password) {
 		driver.findElement(By.id("Password")).sendKeys(password);
 		driver.findElement(By.id("ConfirmPassword")).sendKeys(password);
 		return this;
 	}
 	
-	@And("click Register")
+	@And("Click Register")
 	public RegisterUserStepDefCu clickRegister() {
 		driver.findElement(By.id("register-button")).click();
 		return this;	
 	}
 	
-	@Then("registration should be successful")
+	@Then("Registration should be successful")
 	public void registraionDone() {
 		String text = driver.findElement(By.xpath("//div[contains(text(), 'registration completed')]")).getText();
 		Assert.assertEquals(text, "Your registration completed");

@@ -12,6 +12,7 @@ public class HomePage extends BaseClass{
 		this.driver=driver;
 	}
 	
+	@When("Click on the Register Tab")
 	public RegisterUser gotoRegister() {
 		driver.findElement(By.xpath("//a[text()='Register']")).click();
 		return new RegisterUser(driver);
