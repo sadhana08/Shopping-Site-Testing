@@ -1,0 +1,20 @@
+package utils;
+
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelIntegrationWithTC {
+
+	public static void excelValue(String[] args) throws IOException {
+		XSSFWorkbook workbook = new XSSFWorkbook("./data/ProductData.xlsx");
+		
+		XSSFSheet sheet = workbook.getSheetAt(0);
+		
+		int lastRowNum = sheet.getLastRowNum();
+		System.out.println("Total number of rows"+lastRowNum);
+
+	}
+
+}

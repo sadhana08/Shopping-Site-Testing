@@ -1,0 +1,30 @@
+package utils;
+
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class ExcelIntegrationWithTC {
+
+	public static void main(String[] args) throws IOException {
+		XSSFWorkbook workbook = new XSSFWorkbook("./data/ProductData.xlsx");
+		
+		XSSFSheet sheet = workbook.getSheetAt(0);
+		
+		int rowNumWithoutHeader = sheet.getLastRowNum();
+		System.out.println("Total number of rows excluding header: "+rowNumWithoutHeader);
+		
+		int rowNumWithHeader = sheet.getPhysicalNumberOfRows();
+		System.out.println("Total number of rows including header: "+rowNumWithHeader);
+		
+		short lastCellNum = sheet.getRow(0).getLastCellNum();
+		System.out.println("Total number of cells: "+lastCellNum);
+		
+		String stringCellValue = sheet.getRow(0).getCell(1).getStringCellValue();
+		System.out.println("Row 0, Cell 1 value: "+stringCellValue);
+
+	}
+
+}
